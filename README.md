@@ -104,6 +104,7 @@ To get the count of client invocations
 ```bash
 curl -k -X GET https://localhost/clients/invocations
 ```
+Alternatively open the [Bruno Collection](bruno/ETH)
 
 ### Tech stack
 

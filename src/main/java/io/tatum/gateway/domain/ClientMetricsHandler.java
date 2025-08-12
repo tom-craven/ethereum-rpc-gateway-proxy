@@ -32,7 +32,7 @@ public class ClientMetricsHandler {
    * todo: consider use of proper MDC context and logger like SLF4J
    */
   public static void logRequest(JsonArray request, RoutingContext routingContext, Client client) {
-    var correlationId = routingContext.request().getHeader("correlation-id");
+    var correlationId = routingContext.get("correlation-id");
     var requestMethod = routingContext.request().method();
     var requestUri = routingContext.request().uri();
     var message = "[OK - client: " + client.id() + " correlation-id: " + correlationId + " " + requestMethod + " " + requestUri + " body: " + request + " ]";
