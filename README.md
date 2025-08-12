@@ -11,6 +11,7 @@ an Ethereum blockchain node.
   for production use.
 - The source code contains "todo" with considerations for improvement and Javadoc implementation notes on design
   decisions.
+- There is one test to demonstrate application integration and process, typically I would aim for coverage >80% and utilise more unit tests to fail fast
 
 ---
 
