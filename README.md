@@ -86,7 +86,7 @@ To package your application:
 ./gradlew clean assemble
 ```
 
-To build and launch the docker. first package the application then:
+To build and launch the docker. First package the application and start docker then:
 
 ```bash
 docker-compose up -d
