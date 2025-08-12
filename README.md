@@ -35,11 +35,11 @@ an Ethereum blockchain node.
 
 ### System Overview
 
-1. When a request is made to the proxy server the security handler validates the api-key and the client id is added to
+1. When a request is made to the proxy server ```/rpc``` endpoint the security handler validates the api-key and the client id is added to
    the request context.
 2. The request is passed on to the Proxy handler that routes the request to Ethereum and updates the client metrics
    handler which tracks the client invocations.
-3. Client invocations can be tracked by an endpoint at /count
+3. Client invocations are exposed by an endpoint at ```/clients/invocations```
 
 ```mermaid
 flowchart TB
@@ -51,17 +51,15 @@ flowchart TB
     sch["Security Handler"]
     clm["Client Metrics Handler"]
     jrp["RPC Proxy Handler"]
-  %%    rps[RPC Server]
-  %%    clm["Client Metrics Handler"]
-  %%    dm["Dram Platform"]
-  end
-  cl ---|GET count| rps
-  cl ---|POST request| rps
-  rps ---|Authenticate| sch
-  sch ---|Forward| jrp
-  jrp ---|Route| eth
-  jrp ---|Track| clm
 
+  end
+  cl ---|GET metrics| rps
+  cl ---|POST request| rps
+  rps ---|Authenticate request| sch
+  sch ---|Forward request| jrp
+  jrp ---|Route request| eth
+  rps ---|Return metrics| clm
+  jrp ---|Track request| clm
 
 
 ```
