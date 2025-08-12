@@ -1,0 +1,8 @@
+services:
+  tatum-rpc-proxy:
+    build:
+      dockerfile: Dockerfile
+    environment:
+      ETH_URL: 'https://ethereum-mainnet.gateway.tatum.io'
+    ports:
+      - "443:443"

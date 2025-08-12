@@ -1,0 +1,15 @@
+meta {
+  name: singleMethodRequest
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://localhost:443
+  body: json
+  auth: none
+}
+
+body:json {
+  {"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}
+}

@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "ETH",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

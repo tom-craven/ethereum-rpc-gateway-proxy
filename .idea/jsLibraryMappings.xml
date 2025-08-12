@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <excludedPredefinedLibrary name="tatum/build/spotless-prettier-node-modules-4c385d7d898fd0bfb035888db2e241fa/node_modules" />
+  </component>
+</project>
